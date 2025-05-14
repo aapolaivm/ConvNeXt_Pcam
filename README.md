@@ -22,7 +22,7 @@ The application automatically installs the following dependencies if they are no
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/ConvNeXt_sovellus.git
+git clone https://github.com/aapolaivm/ConvNeXt_sovellus.git
 cd ConvNeXt_sovellus
 ```
 

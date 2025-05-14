@@ -158,10 +158,10 @@ plt.figure(figsize=(10, 8))
 sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=False)
 plt.xlabel('Ennustettu luokka')
 plt.ylabel('Todellinen luokka')
-plt.title('Sekaannusmatriisi')
+plt.title('Virheluokittelumatriisi (Confusion Matrix)')
 plt.savefig(os.path.join(results_dir, 'confusion_matrix.png'))
 plt.close()
-print(f"Sekaannusmatriisi tallennettu: {os.path.join(results_dir, 'confusion_matrix.png')}")
+print(f"Virheluokittelumatriisi tallennettu: {os.path.join(results_dir, 'confusion_matrix.png')}")
 
 # 3. Luokitteluraportti
 report = classification_report(all_labels, all_preds)
