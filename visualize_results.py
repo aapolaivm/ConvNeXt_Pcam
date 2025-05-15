@@ -31,7 +31,8 @@ from PIL import Image
 
 # Voit käyttää PCAM datasettiä tai omaa datasettiäsi
 from torchvision.datasets import PCAM
-# Jos käytät omaa datasettiä, toteuta se kuten aiemmin neuvottiin
+
+# Jos käytät omaa datasettiä, käytä alla olevaa luokkaa apuna 
 # from custom_dataset import CustomImageDataset
 
 # Konfiguraatio
@@ -51,7 +52,7 @@ transform = transforms.Compose([
 
 # Tarkista onko data jo ladattu
 data_exists = False
-pcam_test_dir = os.path.join(data_dir, "pcam", "test")
+pcam_test_dir = data_dir + "/pcam/test"
 
 if os.path.exists(pcam_test_dir):
     # Tarkista että hakemistossa on ainakin yksi kuvatiedosto
@@ -75,7 +76,7 @@ else:
     print("Data ladattu onnistuneesti!")
 
 # Jos käytät omaa datasettiä, korjaa alla oleva rivi
-# test_dataset = CustomImageDataset(img_dir="./oma_data/test", transform=transform)
+#test_dataset = CustomImageDataset(img_dir="./data/oma_data/test", transform=transform)
 
 test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 

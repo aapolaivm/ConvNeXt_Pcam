@@ -28,7 +28,7 @@ class CustomImageDataset(Dataset):
             class_idx = self.class_to_idx[class_name]
             
             for img_name in os.listdir(class_dir):
-                if img_name.lower().endswith(('.png', '.jpg', '.jpeg')):
+                if img_name.lower().endswith(('.png', '.jpg', '.jpeg', '.tif', '.tiff')):
                     self.img_paths.append(os.path.join(class_dir, img_name))
                     self.labels.append(class_idx)
     
